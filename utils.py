@@ -49,8 +49,26 @@ def score_table(exercise, counter, status):
     cv2.putText(score_table, "Activity : " + exercise.replace("-", " "),
                 (10, 65), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (182, 158, 128), 2,
                 cv2.LINE_AA)
-    cv2.putText(score_table, "Counter : " + str(counter), (10, 100),
-                cv2.FONT_HERSHEY_SIMPLEX, 0.7, (182, 158, 128), 2, cv2.LINE_AA)
-    cv2.putText(score_table, "Status : " + str(status), (10, 135),
-                cv2.FONT_HERSHEY_SIMPLEX, 0.7, (182, 158, 128), 2, cv2.LINE_AA)
+    cv2.putText(
+        score_table,
+        f"Counter : {str(counter)}",
+        (10, 100),
+        cv2.FONT_HERSHEY_SIMPLEX,
+        0.7,
+        (182, 158, 128),
+        2,
+        cv2.LINE_AA,
+    )
+
+    cv2.putText(
+        score_table,
+        f"Status : {str(status)}",
+        (10, 135),
+        cv2.FONT_HERSHEY_SIMPLEX,
+        0.7,
+        (182, 158, 128),
+        2,
+        cv2.LINE_AA,
+    )
+
     cv2.imshow("Score Table", score_table)
