@@ -16,9 +16,8 @@ class TypeOfExercise(BodyPartAngle):
             if avg_arm_angle < 70:
                 counter += 1
                 status = False
-        else:
-            if avg_arm_angle > 160:
-                status = True
+        elif avg_arm_angle > 160:
+            status = True
 
         return [counter, status]
 
@@ -35,9 +34,8 @@ class TypeOfExercise(BodyPartAngle):
                 counter += 1
                 status = False
 
-        else:
-            if nose[1] < avg_shoulder_y:
-                status = True
+        elif nose[1] < avg_shoulder_y:
+            status = True
 
         return [counter, status]
 
@@ -50,9 +48,8 @@ class TypeOfExercise(BodyPartAngle):
             if avg_leg_angle < 70:
                 counter += 1
                 status = False
-        else:
-            if avg_leg_angle > 160:
-                status = True
+        elif avg_leg_angle > 160:
+            status = True
 
         return [counter, status]
 
@@ -65,10 +62,9 @@ class TypeOfExercise(BodyPartAngle):
                 counter += 1
                 status = False
 
-        else:
-            if left_knee[0] < right_knee[0]:
-                counter += 1
-                status = True
+        elif left_knee[0] < right_knee[0]:
+            counter += 1
+            status = True
 
         return [counter, status]
 
@@ -78,9 +74,8 @@ class TypeOfExercise(BodyPartAngle):
             if angle < 55:
                 counter += 1
                 status = False
-        else:
-            if angle > 105:
-                status = True
+        elif angle > 105:
+            status = True
 
         return [counter, status]
 
